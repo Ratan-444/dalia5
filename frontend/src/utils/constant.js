@@ -22,35 +22,3 @@ export const options = {
     }
 };
 
-// API Request to fetch Now Playing Movies using the TMDB API Key
-export const fetchNowPlayingMovies = async () => {
-    try {
-        const response = await fetch(`${Now_Playing_Movie}?api_key=${API_KEY}`);
-        const data = await response.json();
-        return data;  // Return the fetched data
-    } catch (error) {
-        console.error("Error fetching now playing movies:", error);
-    }
-};
-
-// Example: Fetch Popular Movies using the API Key
-export const fetchPopularMovies = async () => {
-    try {
-        const response = await fetch(`${Popular_Movie}?api_key=${API_KEY}`);
-        const data = await response.json();
-        return data;  // Return the fetched data
-    } catch (error) {
-        console.error("Error fetching popular movies:", error);
-    }
-};
-
-// Example: Fetch User Data from the backend API using Bearer Token authentication
-export const fetchUserData = async () => {
-    try {
-        const response = await fetch(API_END_POINT, options);
-        const data = await response.json();
-        return data;  // Return the fetched data
-    } catch (error) {
-        console.error("Error fetching user data:", error);
-    }
-};
