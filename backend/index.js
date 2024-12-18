@@ -15,10 +15,11 @@ app.use(express.json());
 app.use(cookieParser());
 
 const corsOptions = {
-     origin: 'https://dalia5-lqro.vercel.app',
-     methods: ['GET', 'POST', 'DELETE', 'PUT'],  // Allow these methods
-     allowedHeaders: ['Content-Type', 'Authorization'], // Add required header
-     credentials: true
+   origin: 'https://dalia5-lqro.vercel.app',
+   methods: ['GET', 'POST'],
+   credentials: true
+};
+
 };
 app.use(cors(corsOptions));
 
