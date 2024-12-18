@@ -1,4 +1,4 @@
-export const API_END_POINT = "https://dalia5-ratans-projects-bda0b515.vercel.app/api/v1/user";
+export const API_END_POINT = "dalia5-ratans-projects-bda0b515.vercel.app/api/v1/user";
 
 export const options = {
     method: 'GET',
