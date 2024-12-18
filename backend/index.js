@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 const corsOptions = {
-     origin: 'http://localhost:3000',
+     origin: 'https://dalia5-uqd7-beta.vercel.app/',
      methods: ['GET', 'POST', 'DELETE', 'PUT'],  // Allow these methods
      allowedHeaders: ['Content-Type', 'Authorization'], // Add required header
      credentials: true
