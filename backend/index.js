@@ -23,7 +23,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-// API routes
+// API routes ok
 app.use("/api/v1/user", userRoute);
 
 app.listen(process.env.PORT, () => {
