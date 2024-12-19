@@ -17,11 +17,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-// CORS setup to allow requests from your frontend domain (adjust the domain as needed)
+// CORS setup
 const corsOptions = {
   origin: 'https://dalia5-lqro.vercel.app', // Replace with your frontend URL
-  methods: ['GET', 'POST'],                // Allow only specific HTTP methods
-  credentials: true,                        // Allow cookies and authentication info to be sent
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow necessary HTTP methods
+  credentials: true, // Allow cookies and authentication info to be sent
 };
 
 // Use CORS middleware with the above options
@@ -31,6 +31,7 @@ app.use(cors(corsOptions));
 app.use('/api/v1/user', userRoute);
 
 // Start the server
-app.listen(process.env.PORT, () => {
-  console.log(`Server is listening at port ${process.env.PORT}`);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server is listening at port ${PORT}`);
 });
