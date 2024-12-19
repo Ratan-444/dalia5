@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/**/*.js",
+      "src": "index.js",  // Pointing to the entry file of your app (index.js)
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/v1/user/(.*)",
-      "dest": "/api/routes/userRoute.js"
+      "dest": "/index.js"  // All API routes will be directed to index.js
     }
   ]
 }
